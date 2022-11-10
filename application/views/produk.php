@@ -7,13 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- // tampilkan data produk dari database dengan kategori dan jumlah data
-        // contoh :
-        // Kategori : Makanan, Jumlah Data : 10
-        // Kategori : Minuman, Jumlah Data : 5
-        // Kategori : Pakaian, Jumlah Data : 3
-        // Kategori : Alat Tulis, Jumlah Data : 2
-     -->
     <table>
         <tr>
             <th>Kategori</th>
