@@ -14,7 +14,7 @@
         </tr>
         <?php foreach ($produk as $p) : ?>
             <tr>
-                <td><?= $p['kategori'] ?></td>
+                <td><?= $p['Kategori'] ?></td>
                 <td><?= $p['Jumlah'] ?></td>
             </tr>
         <?php endforeach; ?>
