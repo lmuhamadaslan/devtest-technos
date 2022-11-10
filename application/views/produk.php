@@ -7,17 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Kategori</th>
-            <th>Jumlah Data</th>
-        </tr>
-        <?php foreach ($produk as $p) : ?>
+    <table border="1">
+        <thead>
             <tr>
-                <td><?= $p['Kategori'] ?></td>
-                <td><?= $p['Jumlah'] ?></td>
+                <th>Kategori</th>
+                <th>Jumlah Data</th>
             </tr>
-        <?php endforeach; ?>
+        </thead>
+        <tbody>
+            <?php foreach ($produk as $row) : ?>
+                <tr>
+                    <td><?= $row['Kategori'] ?></td>
+                    <td><?= $row['Jumlah'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
     </table>
 </body>
 </html>
