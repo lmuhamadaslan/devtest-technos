@@ -1,2 +1,1 @@
-<!-- tampilkan data controller palindrome -->
-<h5>Ini Palindrome page</h5>
+<h2>Ini Palindrome page</h2>

@@ -5,6 +5,7 @@ class Palindrome extends CI_Controller
 {
     public function __construct()
     {
+        parent::__construct();
         $wordList = [];
         $this->palindrome($wordList, 0);
     }

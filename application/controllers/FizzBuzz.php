@@ -9,6 +9,7 @@ class FizzBuzz extends CI_Controller
         $fizz = 0;
         $buzz = 0;
         $this->fizzbuzz($node, $fizz, $buzz);
+        parent::__construct();
     }
 
     public function fizzbuzz($x, $y, $z)
@@ -24,17 +25,17 @@ class FizzBuzz extends CI_Controller
         Example Result:
         1, Fizz, Buzz, Fizz, 5, Fizz, 7, Fizz, Buzz, Fizz, 11, Fizz, 13, Fizz, Buzz, Fizz, 17, Fizz, 19, Fizz, Buzz, Fizz, 23, Fizz, 25, Fizz, Buzz, Fizz, 29, Fizz, 31, Fizz, Buzz, Fizz, 35, Fizz, 37, Fizz, Buzz, Fizz, 41, Fizz, 43, Fizz, Buzz, Fizz, 47, Fizz, 49, Fizz, Buzz, Fizz, 53, Fizz, 55, Fizz, Buzz, Fizz, 59, Fizz, 61, Fizz, Buzz, Fizz, 65, Fizz, 67, Fizz, Buzz, Fizz, 71, Fizz, 73, Fizz, Buzz, Fizz, 77, Fizz, 79, Fizz, Buzz, Fizz, 83, Fizz, 85, Fizz, Buzz, Fizz, 89, Fizz, 91, Fizz, Buzz, Fizz, 95, Fizz, 97, Fizz, Buzz, Fizz,
         */
-        
+
         $x++;
         if ($x <= 100) {
             if ($x % 2 == 0) {
                 $y++;
-                echo " Fizz <br>";
+                echo " Fizz";
             } else if ($x % 3 == 0) {
                 $z++;
-                echo " Buzz <br>";
+                echo " Buzz ";
             } else {
-                echo $x . "<br>";
+                echo " ". $x;
             }
             $this->fizzbuzz($x, $y, $z);
         }
