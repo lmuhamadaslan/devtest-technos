@@ -3,16 +3,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Palindrome extends CI_Controller
 {
-    public function index()
+    public function __construct()
     {
         $wordList = [];
-        $this->palindrome($wordList);
+        $this->palindrome($wordList, 0);
     }
 
     public function palindrome($x)
     {
         // TO DO CODE
-        
         /* 
         Problem :
         Palindrome adalah kondisi dimana sebuah kata akan sama walau dibaca dari depan dan belakang
@@ -31,13 +30,25 @@ class Palindrome extends CI_Controller
         $x++;
         if ($x < count($wordList)) {
             $word = $wordList[$x];
-            $wordReverse = strrev($word);
-            if ($word == $wordReverse) {
-                echo $word . " adalah palindrome <br>";
-            } else {
+            $word = strtolower($word);
+            $revWord = strrev($word);
+            if ($word == '') {
                 echo $word . " bukan palindrome <br>";
+            } else {
+                if ($word == $revWord) {
+                    echo $word . " adalah palindrome <br>";
+                } else {
+                    echo $word . " bukan palindrome <br>";
+                }
             }
             $this->palindrome($x);
         }
     }
+
+    public function show()
+    {
+        $data = $this->palindrome(0);
+        $this->load->view('palindrome', $data);
+    }
+    
 }

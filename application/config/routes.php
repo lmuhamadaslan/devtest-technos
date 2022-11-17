@@ -55,3 +55,9 @@ $route['translate_uri_dashes'] = FALSE;
 
 // produk
 $route['produk'] = 'ProdukController/index';
+
+// palindrome
+$route['palindrome'] = 'Palindrome/show';
+
+// fizzbuzz
+$route['fizzbuzz'] = 'Fizzbuzz/show';
